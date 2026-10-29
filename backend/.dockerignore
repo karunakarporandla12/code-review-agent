@@ -1,0 +1,16 @@
+.git
+.gitignore
+
+.env
+.env.*
+!.env.example
+
+data/
+out.txt
+
+*.log
+
+tmp/
+temp/
+
+coverage/
