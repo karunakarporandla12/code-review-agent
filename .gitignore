@@ -1,0 +1,37 @@
+# Environment files
+.env
+.env.*
+!.env.example
+
+# Dependencies
+node_modules/
+
+# Frontend build
+frontend/build/
+frontend/dist/
+
+# Go build
+*.exe
+*.test
+
+# Logs and temporary files
+*.log
+out.txt
+tmp/
+temp/
+
+# Generated projects and uploads
+backend/data/work/
+backend/data/work/generated-projects/
+backend/data/work/uploads/
+
+# IDE
+.vscode/
+.idea/
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Coverage
+coverage/

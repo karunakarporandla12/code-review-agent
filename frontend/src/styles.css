@@ -1,0 +1,104 @@
+:root {
+    --bs-primary: #0078d4;
+    --bs-primary-rgb: 0, 120, 212;
+}
+
+.btn-primary {
+    --bs-btn-bg: #0078d4;
+    --bs-btn-border-color: #0078d4;
+    --bs-btn-hover-bg: #006cbe;
+    --bs-btn-hover-border-color: #006cbe;
+    --bs-btn-active-bg: #0064b1;
+    --bs-btn-active-border-color: #0064b1;
+}
+
+.btn-outline-primary {
+    --bs-btn-color: #0078d4;
+    --bs-btn-border-color: #0078d4;
+    --bs-btn-hover-bg: #0078d4;
+    --bs-btn-hover-border-color: #0078d4;
+    --bs-btn-active-bg: #006cbe;
+    --bs-btn-active-border-color: #006cbe;
+}
+
+body {
+    background: #f4f7fb;
+    color: #172033
+}
+
+.auth-card {
+    max-width: 440px;
+    margin: 7vh auto
+}
+
+.project-card {
+    color: inherit;
+    transition: .2s;
+    border: 1px solid #dce4ef
+}
+
+.project-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 24px rgba(28, 50, 80, .1)
+}
+
+.card {
+    border-radius: 12px
+}
+
+.badge {
+    font-size: .8rem;
+    text-transform: uppercase
+}
+
+.status-queued {
+    background: #6c757d
+}
+
+.status-running {
+    background: #0dcaf0;
+    color: #172033
+}
+
+.status-completed {
+    background: #198754
+}
+
+.status-failed {
+    background: #dc3545
+}
+
+.severity {
+    font-weight: 700
+}
+
+.severity-critical {
+    color: #842029
+}
+
+.severity-high {
+    color: #b02a37
+}
+
+.severity-medium {
+    color: #997404
+}
+
+.severity-low {
+    color: #055160
+}
+
+.recommendation {
+    background: #eef6ff;
+    border-left: 4px solid #0d6efd;
+    padding: 12px
+}
+
+pre {
+    background: #18212f;
+    color: #e8eef7;
+    border-radius: 8px;
+    padding: 14px;
+    white-space: pre-wrap;
+    word-break: break-word
+}

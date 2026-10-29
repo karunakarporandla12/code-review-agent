@@ -1,0 +1,1245 @@
+:root {
+    --hanuma-primary: #2d8cff;
+    --hanuma-primary-dark: #0969da;
+    --hanuma-cyan: #42e8ff;
+    --hanuma-purple: #8c65ff;
+    --hanuma-green: #29e6a7;
+    --hanuma-orange: #ffb84d;
+    --hanuma-pink: #ff5f9e;
+    --hanuma-dark: #030817;
+    --hanuma-dark-two: #071126;
+    --hanuma-surface: #0b1731;
+    --hanuma-surface-light: #102142;
+    --hanuma-text: #f5f8ff;
+    --hanuma-text-medium: #b9c7e5;
+    --hanuma-text-muted: #7f91b6;
+    --hanuma-border: rgba(115, 164, 255, 0.2);
+    --hanuma-white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    color: var(--hanuma-text);
+    background: var(--hanuma-dark);
+    font-family:
+        Inter,
+        -apple-system,
+        BlinkMacSystemFont,
+        "Segoe UI",
+        sans-serif;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+a {
+    text-decoration: none;
+}
+
+.hanuma-home-page {
+    width: 100%;
+    min-height: 100vh;
+    overflow-x: hidden;
+    background: var(--hanuma-dark);
+}
+
+.hanuma-hero {
+    position: relative;
+    min-height: 830px;
+    display: flex;
+    align-items: center;
+    padding: 130px 0 110px;
+    overflow: hidden;
+    background:
+        radial-gradient(
+            circle at 75% 38%,
+            rgba(45, 140, 255, 0.18),
+            transparent 29%
+        ),
+        radial-gradient(
+            circle at 18% 25%,
+            rgba(140, 101, 255, 0.13),
+            transparent 32%
+        ),
+        linear-gradient(135deg, #020611 0%, #06102a 50%, #030817 100%);
+}
+
+.hanuma-hero-grid,
+.hanuma-cta-grid {
+    position: absolute;
+    inset: 0;
+    background-image:
+        linear-gradient(rgba(67, 146, 255, 0.05) 1px, transparent 1px),
+        linear-gradient(
+            90deg,
+            rgba(67, 146, 255, 0.05) 1px,
+            transparent 1px
+        );
+    background-size: 45px 45px;
+    mask-image: linear-gradient(to bottom, black, transparent);
+}
+
+.hanuma-orb {
+    position: absolute;
+    border-radius: 50%;
+    filter: blur(25px);
+    pointer-events: none;
+}
+
+.hanuma-orb-one {
+    width: 450px;
+    height: 450px;
+    top: -260px;
+    left: -180px;
+    background: rgba(45, 140, 255, 0.16);
+}
+
+.hanuma-orb-two {
+    width: 500px;
+    height: 500px;
+    right: -280px;
+    bottom: -250px;
+    background: rgba(140, 101, 255, 0.17);
+}
+
+.hanuma-orb-three {
+    width: 230px;
+    height: 230px;
+    top: 38%;
+    left: 42%;
+    background: rgba(66, 232, 255, 0.08);
+}
+
+.hanuma-hero-badge,
+.hanuma-cta-badge {
+    display: inline-flex !important;
+    align-items: center;
+    padding: 9px 15px !important;
+    color: #9eeeff !important;
+    background: rgba(45, 140, 255, 0.12) !important;
+    border: 1px solid rgba(66, 232, 255, 0.3);
+    border-radius: 30px !important;
+    font-size: 11px !important;
+    font-weight: 700 !important;
+    letter-spacing: 0.1em;
+    text-transform: uppercase;
+}
+
+.hanuma-badge-pulse {
+    width: 8px;
+    height: 8px;
+    margin-right: 9px;
+    background: var(--hanuma-green);
+    border-radius: 50%;
+    box-shadow: 0 0 12px var(--hanuma-green);
+}
+
+.hanuma-brand-eyebrow {
+    margin: 24px 0 12px;
+    color: #8fa7d1;
+    font-size: 13px;
+    font-weight: 600;
+    letter-spacing: 0.22em;
+    text-transform: uppercase;
+}
+
+.hanuma-hero-title {
+    max-width: 680px;
+    margin: 0;
+    color: var(--hanuma-white);
+    font-size: clamp(3.3rem, 5.4vw, 5.6rem);
+    font-weight: 800;
+    line-height: 1.02;
+    letter-spacing: -0.055em;
+}
+
+.hanuma-hero-title span {
+    background: linear-gradient(
+        90deg,
+        #42e8ff 0%,
+        #2d8cff 48%,
+        #a276ff 100%
+    );
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+.hanuma-hero-subtitle {
+    margin: 25px 0 0;
+    color: #a9bcdf;
+    font-size: 18px;
+    font-weight: 500;
+    letter-spacing: 0.14em;
+    word-spacing: 0.22em;
+}
+
+.hanuma-hero-description {
+    max-width: 650px;
+    margin: 22px 0 32px;
+    color: var(--hanuma-text-medium);
+    font-size: 17px;
+    line-height: 1.8;
+}
+
+.hanuma-hero-actions,
+.hanuma-cta-actions {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px;
+}
+
+.hanuma-primary-button {
+    padding: 13px 25px !important;
+    color: #ffffff !important;
+    background: linear-gradient(
+        135deg,
+        var(--hanuma-primary),
+        #6758e8
+    ) !important;
+    border: 1px solid #4f9cff !important;
+    border-radius: 10px !important;
+    box-shadow: 0 12px 30px rgba(45, 140, 255, 0.3);
+    font-weight: 650 !important;
+    transition: all 0.25s ease !important;
+}
+
+.hanuma-primary-button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 17px 38px rgba(45, 140, 255, 0.42);
+}
+
+.hanuma-secondary-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 13px 23px;
+    color: #d6e2fb;
+    background: rgba(11, 23, 49, 0.72);
+    border: 1px solid rgba(107, 157, 255, 0.3);
+    border-radius: 10px;
+    font-weight: 600;
+    backdrop-filter: blur(10px);
+    transition: all 0.25s ease;
+}
+
+.hanuma-secondary-button:hover {
+    color: #ffffff;
+    background: rgba(45, 140, 255, 0.14);
+    border-color: var(--hanuma-primary);
+}
+
+.hanuma-trust-row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 14px 22px;
+    margin-top: 29px;
+    color: #96a9cb;
+    font-size: 12px;
+}
+
+.hanuma-trust-row div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.hanuma-trust-row i {
+    color: var(--hanuma-green);
+}
+
+.hanuma-agent-visual {
+    position: relative;
+    max-width: 610px;
+    margin-left: auto;
+}
+
+.hanuma-agent-glow {
+    position: absolute;
+    inset: 8%;
+    background: linear-gradient(
+        135deg,
+        rgba(45, 140, 255, 0.55),
+        rgba(140, 101, 255, 0.35)
+    );
+    border-radius: 50%;
+    filter: blur(70px);
+}
+
+.hanuma-agent-window {
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+    background: rgba(5, 13, 32, 0.94);
+    border: 1px solid rgba(91, 157, 255, 0.38);
+    border-radius: 22px;
+    box-shadow:
+        0 35px 90px rgba(0, 0, 0, 0.52),
+        0 0 45px rgba(45, 140, 255, 0.12);
+    backdrop-filter: blur(20px);
+}
+
+.hanuma-window-header {
+    min-height: 62px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+    background: rgba(12, 27, 58, 0.84);
+    border-bottom: 1px solid rgba(99, 152, 255, 0.2);
+}
+
+.hanuma-window-dots {
+    display: flex;
+    gap: 7px;
+}
+
+.hanuma-window-dots span {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+}
+
+.hanuma-window-dots span:nth-child(1) {
+    background: #ff6482;
+}
+
+.hanuma-window-dots span:nth-child(2) {
+    background: #ffbd4a;
+}
+
+.hanuma-window-dots span:nth-child(3) {
+    background: #27dda0;
+}
+
+.hanuma-window-title {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    color: #c9d9f5;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.hanuma-window-title i {
+    color: var(--hanuma-cyan);
+}
+
+.hanuma-live-badge {
+    color: #66f4c6 !important;
+    background: rgba(41, 230, 167, 0.1) !important;
+    border: 1px solid rgba(41, 230, 167, 0.25);
+}
+
+.hanuma-agent-body {
+    padding: 29px;
+    text-align: center;
+}
+
+.hanuma-agent-head {
+    position: relative;
+    width: 125px;
+    height: 105px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 5px auto 12px;
+    background: linear-gradient(145deg, #eff7ff, #8da8c6);
+    border: 5px solid #dceeff;
+    border-radius: 44px;
+    box-shadow:
+        0 0 30px rgba(66, 232, 255, 0.32),
+        inset 0 -8px 18px rgba(28, 70, 110, 0.25);
+}
+
+.hanuma-agent-antenna {
+    position: absolute;
+    top: -29px;
+    right: 21px;
+    width: 3px;
+    height: 31px;
+    background: #70cfff;
+}
+
+.hanuma-agent-antenna span {
+    position: absolute;
+    top: -5px;
+    left: -4px;
+    width: 11px;
+    height: 11px;
+    background: var(--hanuma-cyan);
+    border-radius: 50%;
+    box-shadow: 0 0 16px var(--hanuma-cyan);
+}
+
+.hanuma-agent-face {
+    width: 101px;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-evenly;
+    background: linear-gradient(180deg, #061328, #020713);
+    border: 2px solid rgba(66, 232, 255, 0.38);
+    border-radius: 32px;
+}
+
+.hanuma-eye {
+    width: 24px;
+    height: 12px;
+    border-top: 5px solid var(--hanuma-cyan);
+    border-radius: 50%;
+    filter: drop-shadow(0 0 7px var(--hanuma-cyan));
+}
+
+.hanuma-agent-name {
+    color: #70eaff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+    text-shadow: 0 0 17px rgba(66, 232, 255, 0.6);
+}
+
+.hanuma-agent-body > p {
+    margin: 5px 0 24px;
+    color: #788db5;
+    font-size: 12px;
+}
+
+.hanuma-code-panel {
+    overflow-x: auto;
+    padding: 17px;
+    background: #020716;
+    border: 1px solid rgba(100, 151, 255, 0.2);
+    border-radius: 12px;
+    text-align: left;
+}
+
+.hanuma-code-line {
+    display: flex;
+    min-width: 530px;
+    padding: 6px 9px;
+    border-left: 2px solid transparent;
+}
+
+.hanuma-code-line > span {
+    width: 30px;
+    flex-shrink: 0;
+    color: #495f85;
+    font-family: monospace;
+    font-size: 11px;
+}
+
+.hanuma-code-line code {
+    color: #9fb2d3;
+    font-size: 11px;
+}
+
+.hanuma-code-line.highlight {
+    background: rgba(45, 140, 255, 0.12);
+    border-left-color: var(--hanuma-primary);
+}
+
+.hanuma-code-line.highlight code {
+    color: #79dfff;
+}
+
+.hanuma-code-line.success code {
+    color: #5de5b5;
+}
+
+.hanuma-agent-status {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 11px;
+    margin-top: 19px;
+}
+
+.hanuma-agent-status div {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    padding: 10px;
+    color: #abbddd;
+    background: rgba(15, 34, 69, 0.64);
+    border: 1px solid rgba(96, 152, 255, 0.16);
+    border-radius: 8px;
+    font-size: 10px;
+    text-align: left;
+}
+
+.hanuma-agent-status i {
+    color: var(--hanuma-green);
+}
+
+.hanuma-floating-card,
+.hanuma-encryption-chip {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: #dce9ff;
+    background: rgba(7, 18, 42, 0.94);
+    border: 1px solid rgba(74, 173, 255, 0.48);
+    border-radius: 12px;
+    box-shadow:
+        0 14px 34px rgba(0, 0, 0, 0.38),
+        0 0 20px rgba(45, 140, 255, 0.12);
+    backdrop-filter: blur(12px);
+}
+
+.hanuma-floating-card {
+    padding: 12px 15px;
+}
+
+.hanuma-floating-card i {
+    color: var(--hanuma-cyan);
+    font-size: 21px;
+}
+
+.hanuma-floating-card span,
+.hanuma-floating-card strong,
+.hanuma-encryption-chip span,
+.hanuma-encryption-chip strong {
+    display: block;
+}
+
+.hanuma-floating-card span,
+.hanuma-encryption-chip span {
+    color: #7f94ba;
+    font-size: 9px;
+}
+
+.hanuma-floating-card strong,
+.hanuma-encryption-chip strong {
+    margin-top: 2px;
+    font-size: 11px;
+}
+
+.hanuma-floating-idea {
+    top: 30%;
+    left: -55px;
+}
+
+.hanuma-floating-deploy {
+    top: 20%;
+    right: -52px;
+}
+
+.hanuma-encryption-chip {
+    right: 30px;
+    bottom: -25px;
+    padding: 11px 15px;
+}
+
+.hanuma-encryption-chip > i {
+    color: var(--hanuma-green);
+}
+
+.hanuma-workflow-section,
+.hanuma-capabilities-section,
+.hanuma-encryption-section {
+    padding: 110px 0;
+}
+
+.hanuma-workflow-section {
+    background: #050b1a;
+    border-top: 1px solid rgba(89, 142, 243, 0.1);
+}
+
+.hanuma-section-heading {
+    max-width: 760px;
+    margin: 0 auto 62px;
+    text-align: center;
+}
+
+.hanuma-section-label {
+    display: inline-block;
+    margin-bottom: 15px;
+    color: var(--hanuma-cyan);
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 0.16em;
+}
+
+.hanuma-section-heading h2,
+.hanuma-encryption-title {
+    margin: 0;
+    color: #f5f8ff;
+    font-size: clamp(2.1rem, 3.5vw, 3.4rem);
+    font-weight: 800;
+    line-height: 1.15;
+    letter-spacing: -0.04em;
+}
+
+.hanuma-section-heading p,
+.hanuma-encryption-description {
+    margin: 20px auto 0;
+    color: var(--hanuma-text-medium);
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.hanuma-workflow-container {
+    position: relative;
+}
+
+.hanuma-workflow-line {
+    position: absolute;
+    top: 90px;
+    left: 9%;
+    right: 9%;
+    height: 1px;
+    background: linear-gradient(
+        90deg,
+        transparent,
+        rgba(66, 232, 255, 0.5),
+        rgba(140, 101, 255, 0.55),
+        transparent
+    );
+}
+
+.hanuma-workflow-card {
+    position: relative;
+    z-index: 2;
+    height: 100%;
+    padding: 23px 15px;
+    text-align: center;
+}
+
+.hanuma-stage-number {
+    margin-bottom: 14px;
+    color: #25395f;
+    font-size: 33px;
+    font-weight: 800;
+}
+
+.hanuma-stage-icon,
+.hanuma-capability-icon {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hanuma-stage-icon {
+    width: 62px;
+    height: 62px;
+    margin: 0 auto 24px;
+    color: #ffffff;
+    background: #0a1732;
+    border: 1px solid;
+    border-radius: 16px;
+    font-size: 22px;
+}
+
+.hanuma-stage-icon.blue,
+.hanuma-capability-icon.blue {
+    color: #55c7ff;
+    border-color: rgba(85, 199, 255, 0.45);
+    box-shadow: 0 0 22px rgba(45, 140, 255, 0.18);
+}
+
+.hanuma-stage-icon.green,
+.hanuma-capability-icon.green {
+    color: #36e4ad;
+    border-color: rgba(54, 228, 173, 0.4);
+}
+
+.hanuma-stage-icon.orange,
+.hanuma-capability-icon.orange {
+    color: #ffba59;
+    border-color: rgba(255, 186, 89, 0.4);
+}
+
+.hanuma-stage-icon.purple,
+.hanuma-capability-icon.purple {
+    color: #a881ff;
+    border-color: rgba(168, 129, 255, 0.4);
+}
+
+.hanuma-stage-icon.pink,
+.hanuma-capability-icon.pink {
+    color: #ff75aa;
+    border-color: rgba(255, 117, 170, 0.4);
+}
+
+.hanuma-capability-icon.cyan {
+    color: #42e8ff;
+    border-color: rgba(66, 232, 255, 0.4);
+}
+
+.hanuma-workflow-card h4 {
+    margin-bottom: 12px;
+    color: #f4f7ff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hanuma-workflow-card p {
+    margin: 0;
+    color: #8194b7;
+    font-size: 12px;
+    line-height: 1.7;
+}
+
+.hanuma-capabilities-section {
+    background:
+        radial-gradient(
+            circle at 50% 10%,
+            rgba(45, 140, 255, 0.08),
+            transparent 35%
+        ),
+        #071025;
+}
+
+.hanuma-capability-card {
+    overflow: hidden;
+    background: rgba(10, 23, 49, 0.82) !important;
+    border: 1px solid rgba(100, 150, 245, 0.18) !important;
+    border-radius: 16px !important;
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.12);
+    transition: all 0.3s ease;
+}
+
+.hanuma-capability-card:hover {
+    transform: translateY(-7px);
+    background: rgba(13, 30, 62, 0.96) !important;
+    border-color: rgba(66, 190, 255, 0.42) !important;
+    box-shadow:
+        0 23px 48px rgba(0, 0, 0, 0.3),
+        0 0 24px rgba(45, 140, 255, 0.08);
+}
+
+.hanuma-capability-card .card-body {
+    padding: 29px;
+}
+
+.hanuma-capability-icon {
+    width: 49px;
+    height: 49px;
+    margin-bottom: 23px;
+    background: #08162f;
+    border: 1px solid;
+    border-radius: 12px;
+    font-size: 20px;
+}
+
+.hanuma-capability-card .card-title {
+    margin-bottom: 12px;
+    color: #f3f7ff;
+    font-size: 18px;
+    font-weight: 700;
+}
+
+.hanuma-capability-card .card-text {
+    min-height: 78px;
+    margin-bottom: 20px;
+    color: #91a3c3;
+    font-size: 13px;
+    line-height: 1.72;
+}
+
+.hanuma-card-link {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    color: #62d6ff;
+    font-size: 12px;
+    font-weight: 700;
+}
+
+.hanuma-card-link i {
+    transition: transform 0.2s ease;
+}
+
+.hanuma-capability-card:hover .hanuma-card-link i {
+    transform: translateX(4px);
+}
+
+.hanuma-encryption-section {
+    background: #040a18;
+}
+
+.hanuma-encryption-visual {
+    position: relative;
+    height: 470px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.hanuma-encryption-ring {
+    position: absolute;
+    border: 1px solid rgba(73, 169, 255, 0.27);
+    border-radius: 50%;
+}
+
+.hanuma-encryption-ring.ring-one {
+    width: 410px;
+    height: 410px;
+}
+
+.hanuma-encryption-ring.ring-two {
+    width: 310px;
+    height: 310px;
+}
+
+.hanuma-encryption-ring.ring-three {
+    width: 215px;
+    height: 215px;
+    background: rgba(45, 140, 255, 0.05);
+}
+
+.hanuma-encryption-core {
+    position: relative;
+    z-index: 3;
+    width: 145px;
+    height: 145px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(145deg, #123d78, #281c70);
+    border: 1px solid rgba(108, 211, 255, 0.62);
+    border-radius: 36px;
+    box-shadow:
+        0 22px 55px rgba(0, 100, 255, 0.34),
+        inset 0 0 24px rgba(87, 213, 255, 0.12);
+}
+
+.hanuma-encryption-core i {
+    margin-bottom: 8px;
+    color: #71eeff;
+    font-size: 43px;
+}
+
+.hanuma-encryption-core strong {
+    font-size: 14px;
+}
+
+.hanuma-encryption-core span {
+    margin-top: 3px;
+    color: #a8bde1;
+    font-size: 9px;
+}
+
+.hanuma-secure-node {
+    position: absolute;
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    padding: 10px 13px;
+    color: #bcd0ee;
+    background: rgba(9, 23, 50, 0.95);
+    border: 1px solid rgba(83, 163, 255, 0.32);
+    border-radius: 9px;
+    box-shadow: 0 12px 26px rgba(0, 0, 0, 0.28);
+    font-size: 11px;
+}
+
+.hanuma-secure-node i {
+    color: var(--hanuma-cyan);
+}
+
+.node-code {
+    top: 48px;
+    left: 25px;
+}
+
+.node-repository {
+    top: 73px;
+    right: 6px;
+}
+
+.node-report {
+    left: 0;
+    bottom: 70px;
+}
+
+.node-deployment {
+    right: 14px;
+    bottom: 45px;
+}
+
+.hanuma-encryption-title {
+    max-width: 650px;
+}
+
+.hanuma-encryption-description {
+    max-width: 650px;
+    margin-left: 0;
+}
+
+.hanuma-security-item {
+    height: 100%;
+    display: flex;
+    gap: 13px;
+    padding: 17px;
+    background: rgba(10, 23, 49, 0.58);
+    border: 1px solid rgba(99, 151, 245, 0.14);
+    border-radius: 12px;
+    transition: all 0.2s ease;
+}
+
+.hanuma-security-item:hover {
+    background: rgba(13, 31, 64, 0.78);
+    border-color: rgba(76, 175, 255, 0.3);
+}
+
+.hanuma-security-item-icon {
+    width: 39px;
+    height: 39px;
+    flex-shrink: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #63deff;
+    background: rgba(45, 140, 255, 0.12);
+    border-radius: 9px;
+}
+
+.hanuma-security-item h5 {
+    margin: 0 0 6px;
+    color: #edf3ff;
+    font-size: 14px;
+    font-weight: 700;
+}
+
+.hanuma-security-item p {
+    margin: 0;
+    color: #8396b9;
+    font-size: 11px;
+    line-height: 1.65;
+}
+
+.hanuma-cta-section {
+    padding: 30px 0 100px;
+    background: #040a18;
+}
+
+.hanuma-cta-card {
+    position: relative;
+    overflow: hidden;
+    padding: 78px 35px;
+    background:
+        radial-gradient(
+            circle at 50% 0%,
+            rgba(70, 214, 255, 0.22),
+            transparent 36%
+        ),
+        linear-gradient(125deg, #081f48, #0d3a78 48%, #342171);
+    border: 1px solid rgba(99, 193, 255, 0.28);
+    border-radius: 25px;
+    box-shadow: 0 25px 65px rgba(0, 0, 0, 0.32);
+    text-align: center;
+}
+
+.hanuma-cta-orb {
+    position: absolute;
+    width: 420px;
+    height: 420px;
+    right: -240px;
+    bottom: -280px;
+    background: rgba(145, 83, 255, 0.25);
+    border-radius: 50%;
+    filter: blur(25px);
+}
+
+.hanuma-cta-content {
+    position: relative;
+    z-index: 2;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hanuma-cta-card h2 {
+    margin: 22px 0 18px;
+    color: #ffffff;
+    font-size: clamp(2.2rem, 4vw, 3.5rem);
+    font-weight: 800;
+    line-height: 1.13;
+    letter-spacing: -0.045em;
+}
+
+.hanuma-cta-card p {
+    max-width: 680px;
+    margin: 0 auto 32px;
+    color: #c1d0ed;
+    font-size: 16px;
+    line-height: 1.75;
+}
+
+.hanuma-cta-actions {
+    justify-content: center;
+}
+
+.hanuma-cta-primary,
+.hanuma-cta-secondary {
+    padding: 12px 24px !important;
+    border-radius: 9px !important;
+    font-weight: 650 !important;
+}
+
+.hanuma-cta-primary {
+    color: #073469 !important;
+    background: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.hanuma-cta-secondary {
+    color: #ffffff !important;
+    background: rgba(255, 255, 255, 0.07) !important;
+    border: 1px solid rgba(255, 255, 255, 0.4) !important;
+}
+
+.hanuma-footer {
+    padding: 46px 0 25px;
+    background: #020611;
+    border-top: 1px solid rgba(99, 151, 245, 0.14);
+}
+
+.hanuma-footer-brand {
+    display: inline-flex;
+    align-items: center;
+    gap: 12px;
+    color: inherit;
+}
+
+.hanuma-brand-mark {
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    background: linear-gradient(135deg, #2d8cff, #754ee8);
+    border: 1px solid rgba(100, 212, 255, 0.42);
+    border-radius: 11px;
+    box-shadow: 0 0 20px rgba(45, 140, 255, 0.18);
+}
+
+.hanuma-brand-title {
+    color: #f4f7ff;
+    font-size: 17px;
+    font-weight: 800;
+    letter-spacing: 0.14em;
+}
+
+.hanuma-brand-subtitle {
+    margin-top: 2px;
+    color: #657a9f;
+    font-size: 9px;
+}
+
+.hanuma-footer-links {
+    display: flex;
+    justify-content: flex-end;
+    flex-wrap: wrap;
+    gap: 27px;
+}
+
+.hanuma-footer-links a {
+    color: #8295b7;
+    font-size: 12px;
+    font-weight: 500;
+    transition: color 0.2s ease;
+}
+
+.hanuma-footer-links a:hover {
+    color: var(--hanuma-cyan);
+}
+
+.hanuma-footer-divider {
+    height: 1px;
+    margin: 35px 0 20px;
+    background: rgba(103, 148, 231, 0.13);
+}
+
+.hanuma-footer-bottom {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #566b90;
+    font-size: 10px;
+}
+
+.hanuma-footer-status {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+.hanuma-status-dot {
+    width: 7px;
+    height: 7px;
+    background: var(--hanuma-green);
+    border-radius: 50%;
+    box-shadow: 0 0 8px rgba(41, 230, 167, 0.75);
+}
+
+@media (max-width: 1199px) {
+    .hanuma-floating-idea {
+        left: -20px;
+    }
+
+    .hanuma-floating-deploy {
+        right: -20px;
+    }
+
+    .hanuma-workflow-line {
+        display: none;
+    }
+}
+
+@media (max-width: 991px) {
+    .hanuma-hero {
+        min-height: auto;
+        padding: 95px 0 100px;
+    }
+
+    .hanuma-agent-visual {
+        max-width: 650px;
+        margin: 55px auto 0;
+    }
+
+    .hanuma-workflow-section,
+    .hanuma-capabilities-section,
+    .hanuma-encryption-section {
+        padding: 85px 0;
+    }
+
+    .hanuma-encryption-visual {
+        max-width: 540px;
+        margin: 0 auto 30px;
+    }
+
+    .hanuma-encryption-title,
+    .hanuma-encryption-description {
+        margin-left: auto;
+        margin-right: auto;
+        text-align: center;
+    }
+
+    .hanuma-encryption-section .hanuma-section-label {
+        display: block;
+        text-align: center;
+    }
+
+    .hanuma-footer-links {
+        justify-content: flex-start;
+    }
+}
+
+@media (max-width: 767px) {
+    .hanuma-hero {
+        padding: 75px 0 85px;
+    }
+
+    .hanuma-hero-title {
+        font-size: 3.2rem;
+    }
+
+    .hanuma-hero-subtitle {
+        font-size: 14px;
+        letter-spacing: 0.08em;
+    }
+
+    .hanuma-hero-description {
+        font-size: 15px;
+    }
+
+    .hanuma-hero-actions {
+        flex-direction: column;
+    }
+
+    .hanuma-primary-button,
+    .hanuma-secondary-button {
+        width: 100%;
+    }
+
+    .hanuma-floating-card {
+        display: none;
+    }
+
+    .hanuma-encryption-chip {
+        position: relative;
+        right: auto;
+        bottom: auto;
+        width: fit-content;
+        margin: 12px auto 0;
+    }
+
+    .hanuma-agent-body {
+        padding: 22px 15px;
+    }
+
+    .hanuma-agent-status {
+        grid-template-columns: 1fr;
+    }
+
+    .hanuma-section-heading {
+        margin-bottom: 45px;
+    }
+
+    .hanuma-encryption-visual {
+        height: 400px;
+        transform: scale(0.88);
+        margin-left: -25px;
+        margin-right: -25px;
+    }
+
+    .hanuma-cta-card {
+        padding: 58px 20px;
+        border-radius: 19px;
+    }
+
+    .hanuma-footer-bottom {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .hanuma-hero-title {
+        font-size: 2.65rem;
+    }
+
+    .hanuma-hero-subtitle {
+        line-height: 1.8;
+    }
+
+    .hanuma-trust-row {
+        flex-direction: column;
+    }
+
+    .hanuma-window-header {
+        padding: 0 13px;
+    }
+
+    .hanuma-live-badge {
+        display: none;
+    }
+
+    .hanuma-code-panel {
+        padding: 12px 8px;
+    }
+
+    .hanuma-encryption-visual {
+        height: 340px;
+        transform: scale(0.72);
+        margin-left: -65px;
+        margin-right: -65px;
+    }
+
+    .hanuma-footer-links {
+        gap: 15px 20px;
+    }
+}
